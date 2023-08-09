@@ -3,12 +3,12 @@
 int main(void) {
   printf("Hello World\n"); // anti-zica
   char frame[39] = "+-----------------------------------+\n";
-  int tf = 0; // true, false
+  int tf = 0; // true, false - controlador do while
 
   char nome[45];
   char escolhas[1];
-  double media[3];
-  char materia[][25] = {"Matematica", "Historia", "Portugues"};
+  // double media[3];
+  // char materia[][25] = {"Matematica", "Historia", "Portugues"};
 
   while (tf == 0) {
     printf("Digite o nome do aluno: ");
@@ -17,7 +17,8 @@ int main(void) {
         "Selecione a materia \n> Matematica(A)\n> Historia(B)\n> Portugues(C)");
     scanf("%c", &escolhas[1]);
     if ((escolhas[0] == 'a') || (escolhas[0] == 'b') || (escolhas[0] == 'c')) {
-      switch (escolhas[0]) {
+      printf("ebaaaa funcionou");
+      /*switch (escolhas[0]) {
       case 'a':
         printf("Matematica");
         break;
@@ -27,11 +28,12 @@ int main(void) {
       case 'c':
         printf("Portugues");
         break;
-      }
+      }*/
     } else {
       printf("A letra digitada não faz parte das opcoes dispostas acima");
       tf = 1; // provisorio
     }
+    break;
   }
 
   return 0;
